@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Omnia Saged | Frontend Developer</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="#logo"><img src="../Week One/images/logo.svg" alt="Omnia Saged Logo" aria-hidden="true"></a>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="home">
+            <div class="info-section">
+                <h2>Welcome to My Portfolio</h2>
+                <div class="profile-info">
+                    <h3 class="name">Omnia Saged</h3>
+                    <p>Frontend Developer</p>
+                    <div class="cta-buttons">
+                        <button type="button" class="hire-btn">Hire Me</button>
+                        <button type="button" class="download-cv">Download CV</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="about">
+            <div class="about-me">
+                <img src="../Week One/images/avatar-1.jpg" alt="Omnia Saged" class="avatar">
+                <div class="bio">
+                    <h2>Omnia Saged</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Provident, pariatur, aperiam aut autem voluptas odit. Odio ducimus delectus totam sed aliquam sequi praesentium mollitia, illum repudiandae quidem quod, magni magnam.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="media">
+            <div class="media-container">
+                <h3>YouTube Project</h3>
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/lkIFF4maKMU?si=9ZFL2h_BPNetdznL" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </div>
+
+            <div class="media-container">
+                <h3>Music Project</h3>
+                <audio controls>
+                    <source src="horse.mp3" type="audio/mpeg">
+                    Your browser does not support the audio element.
+                </audio>
+            </div>
+        </section>
+
+        <section id="projects">
+            <div class="project-grid">
+                <div class="project-item" id="proj1" data-project-type="web">
+                    <h2>Stone Work</h2>
+                    <p>The best commercial buildings are designed to enhance the brand, attract more customers and increase brand loyalty. Environmental Stoneworks has the experience</p>
+                    <a href="https://foxaya.github.io/stone-work-project/" class="project-link">View Project</a>
+                </div>
+
+                <div class="project-item" id="proj2" data-project-type="web">
+                    <h2>Ink Tatto</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc risus eros, ultricies quis erat sit amet, elementum vulputate lorem. Sed at lacinia lectus, quis blandit libero.</p>
+                    <a href="https://foxaya.github.io/tatto-project/" class="project-link">View Project</a>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact">
+            <form action="/submit-form" method="post">
+                <div class="form-group">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="message">Message:</label>
+                    <textarea id="message" name="message" required></textarea>
+                </div>
+                <button type="submit" class="send-message">Send Message</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Omnia Saged. All rights reserved.</p>
+    </footer>
+
+
+</body>
+</html>
