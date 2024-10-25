@@ -1,31 +1,115 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Yummy.</title>
-    
+    <title>Dashboard</title>
+
     <!-- CSS links -->
     <link rel="stylesheet" href="../Day_05/Day_05.css">
-    
+
     <!-- Google Web Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;600&family=Inter:wght@700;800&display=swap" rel="stylesheet">
-     
+    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;600&family=Inter:wght@700;800&display=swap"
+        rel="stylesheet">
+
     <!-- Font Awesome -->
     <link rel="stylesheet" href="../fontawesome-free-6.6.0-web/css/all.min.css">
 </head>
+
 <body>
-    <!-----------------header------------------------------>
-     
-    
-    
-    <!-----------------Hero Section----------------------------->
 
-    
+    <div class="admin">
+        <header class="admin__header">
+            <a href="#" class="logo">
+                <h1>Base</h1>
+            </a>
+            <div class="toolbar">
+                <button class="btn btn--primary">Add New Plumbus</button>
+                <a href="#" class="logout">
+                    Log Out
+                </a>
+            </div>
+        </header>
+        <nav class="admin__nav">
+            <ul class="menu">
+                <li class="menu__item">
+                    <a class="menu__link" href="#">Dashboard</a>
+                </li>
+                <li class="menu__item">
+                    <a class="menu__link" href="#">Sales</a>
+                </li>
+                <li class="menu__item">
+                    <a class="menu__link" href="#">Campagins</a>
+                </li>
+                <li class="menu__item">
+                    <a class="menu__link" href="#">Servers</a>
+                </li>
+                <li class="menu__item">
+                    <a class="menu__link" href="#">Foobars</a>
+                </li>
+                <li class="menu__item">
+                    <a class="menu__link" href="#">Plumbuses</a>
+                </li>
+            </ul>
+        </nav>
+        <main class="admin__main">
+            <h2>Dashboard</h2>
+            <div class="dashboard">
+                <div class="dashboard__item">
+                    <div class="card">
+                        <strong>178+</strong>
+                        <h5>Save Product</h5>
+                    </div>
+                </div>
+                <div class="dashboard__item">
+                    <div class="card">
+                        <strong>81.712</strong>
+                        <h5>Stock Products</h5>
 
+                    </div>
+                </div>
+                <div class="dashboard__item dashboard__item--full">
+                    <div class="card">
+                        <img src="../images/diagram.png" alt="" />
+                    </div>
+                </div>
+                <div class="dashboard__item dashboard__item--col">
+                    <div class="card">
+                        <h1>Sales</h1>
+                        <img src="../images/progress-.png" alt="progress-one">
+                    </div>
+                </div>
 
+                <div class="dashboard__item dashboard__item--col">
+                    <div class="card">
+                        <h1>Campagins</h1>
+                        <img src="../images/download.png" alt="progress-two">
+                    </div>
+                </div>
+                <div class="dashboard__item dashboard__item--col">
+                    <div class="card">
+                        <h1>Servers</h1>
+                        <img src="../images/progress-.png" alt="progress-one">
+                    </div>
+                </div>
+        </main>
+        <footer class="admin__footer">
+            <ul class="ticker">
+                <li class="ticker__item">BTC: +3.12%</li>
+                <li class="ticker__item">ETH: +1.29%</li>
+                <li class="ticker__item">XRP: -0.32%</li>
+                <li class="ticker__item">BCH: -2.82%</li>
+                <li class="ticker__item">EOS: +1.44%</li>
+                <li class="ticker__item">CSS: +13.37%</li>
+            </ul>
+            <span>
+                &copy; 2024 Dashboard
+            </span>
+        </footer>
+    </div>
     <!-- Font Awesome -->
     <script src="../fontawesome-free-6.6.0-web/js/all.min.js"></script>
 </body>

@@ -1,69 +1,214 @@
 :root {
-  
-  --primary: #00B98E;
-  --secondary: #FF6922;
-  --light: #EFFDF5;
-  --dark: #0E2E50;
-    --font-family-base: "Heebo", sans-serif;;
-  --font-family-title:"Inter", sans-serif;;
-  --font-size-small: 1.5rem;
-  --font-size-medium: 2rem;
-  --font-size-large: 3.5rem;
-  --font-weight-regular: 400;
-  --font-weight-bold: 900;
-  --line-height-small: 1.2;
-  --line-height-base: 1.5;
-  --line-height-big: 1.8;
-  --border-raduis :  10px;
+  --admin-header-height: 70px;
+  --admin-footer-height: 70px;
+  --admin-nav-width: 250px;
+  --spacing: 1rem;
 }
 
-*{
+*,
+*::before,
+*::after {
   box-sizing: border-box;
-  padding: 0;
-  margin: 0;
-}
-html {
-  scroll-behavior: smooth;
 }
 
 body {
-  max-width: 100%;
-  max-height: 100vh;
+  height: 100%;
+  overflow-x: hidden;
+  font-size: 18px;
+  font-family: "Heebo", sans-serif;
+}
+
+.admin {
+  display: grid;
+  height: 100vh;
+  grid-template-rows: var(--admin-header-height) 1fr var(--admin-footer-height);
+  grid-template-columns: var(--admin-nav-width) 1fr;
+  grid-template-areas:
+    "header header"
+    "nav    main"
+    "footer footer";
+}
+
+.admin__header {
+  display: flex;
+  grid-area: header;
+  height: var(--admin-header-height);
+  background-color: #fff;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
+  position: relative;
+}
+
+.admin__nav {
+  flex: 0 0 var(--admin-nav-width);
+  grid-area: nav;
+  background-color: #313541;
+}
+
+.admin__main {
+  flex: 1;
+  grid-area: main;
+  padding: var(--spacing);
+  overflow-y: auto;
+  overflow-x: hidden;
+  -webkit-overflow-scrolling: touch;
+  background-color: #f4f7fa;
+}
+
+.admin__footer {
+  display: flex;
+  grid-area: footer;
+  justify-content: space-between;
+  align-items: center;
+  height: var(--admin-footer-height);
+  padding: 0 var(--spacing);
+  color: #4e5561;
+  background-color: #1d2127;
+}
+
+
+
+
+.dashboard {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: var(--spacing);
+  margin: 0 calc(var(--spacing) * -0.5);
+}
+
+.dashboard__item {
+  grid-column-end: span 2;
+  padding: calc(var(--spacing) / 2);
+}
+
+.dashboard__item--full {
+  grid-column: 1 / -1;
+}
+
+.dashboard__item--col {
+  grid-column-end: span 2;
+}
+
+
+
+@supports (display: grid) {
+  .dashboard {
+    margin: 0;
+  }
+
+  .dashboard__item {
+    padding: 0;
+  }
 }
 
 a {
+  color: rgba(53, 197, 53, 0.811);
   text-decoration: none;
 }
 
-ul {
-  list-style: none;
+img {
+  max-width: 100%;
+  height: auto;
 }
-/*******************************************/
-.header{
+
+.logo {
   display: flex;
+  flex: 0 0 var(--admin-nav-width);
+  height: var(--admin-header-height);
+  justify-content: center;
   align-items: center;
-  position: sticky;
-  z-index: 9999;
+  color: #fff;
+  background-color: #ca43be;
+  font-size: 1rem;
+
 }
-.header .container{
-  position:relative;
+
+.logo h1 {
+  margin: 0;
+}
+
+.toolbar {
   display: flex;
-  justify-content:space-between ;
+  flex: 1;
+  justify-content: space-between;
   align-items: center;
+  padding: 0 var(--spacing);
+}
+
+.menu {
+  list-style-type: none;
+  padding: 0;
+}
+
+.menu__item {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.07);
+}
+
+.menu__link {
+  display: block;
+  padding: 1rem 2rem;
+  color: #76808f;
+  text-decoration: none;
+}
+
+.menu__link:hover,
+.menu__link:focus {
+  color: #fff;
+  background-color: #1f222d;
+}
+
+.card {
+  height: 100%;
+  padding: 1rem;
+  font-size: 1rem;
+  font-weight: 300;
+  background-color: #fff;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+  text-align: center;
+}
+
+.card strong {
+  color: rgba(53, 197, 53, 0.811);
+  font-weight: 800;
+}
+
+.btn {
+  display: inline-block;
+  border-radius: 5em;
+  border: 0;
+  padding: 0.5rem 1rem;
+  white-space: nowrap;
+}
+
+.btn--primary {
+  color: #fff;
+  background-color: rgba(53, 197, 53, 0.811);
 
 }
 
-.logo{
-display:flex;
-align-items: center;
+.ticker {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.ticker__item {
+  margin-right: 1rem;
 }
 
 
+/*******************quieres*******************************/
+@media screen and (min-width: 48rem) {
+  :root {
+    --spacing: 2rem;
+  }
+}
 
 
-
-
-
-
-
-
+@media screen and (min-width: 48rem) {
+  .dashboard {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
